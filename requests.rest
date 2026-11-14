@@ -1,0 +1,113 @@
+POST http://localhost:3000/category
+Content-Type: application/json
+
+{
+    "title" : "fruits",
+    "image" : "fruits.png",
+    "parent_id" : null
+}
+
+###
+
+PUT http://localhost:3000/category/1
+Content-Type: application/json
+Authorization: Bearer <access_token>
+
+{
+    "title" : "vegetables",
+    "slug" : "vegetables",
+    "image" : "vegetables.png",
+    "parent_id" : null
+}
+
+###
+
+PATCH http://localhost:3000/category/1
+Content-Type: application/json
+Authorization: Bearer <access_token>
+
+{
+    "title" : "green vegetables"
+}
+
+###
+
+DELETE http://localhost:3000/category/1
+Authorization: Bearer <access_token>
+###
+
+GET http://localhost:3000/user
+Authorization: Bearer <access_token>
+
+###
+
+GET http://localhost:3000/user/1
+Authorization: Bearer <access_token>
+
+###
+
+PATCH http://localhost:3000/user/1
+Content-Type: application/json
+Authorization: Bearer <access_token>
+
+{
+    "fullname" : "New Name",
+    "email" : "new@example.com",
+    "password" : "new-password"
+}
+
+###
+
+DELETE http://localhost:3000/user/1
+Authorization: Bearer <access_token>
+
+###
+
+GET http://localhost:3000/product
+Authorization: Bearer <access_token>
+
+###
+
+GET http://localhost:3000/product/1
+Authorization: Bearer <access_token>
+
+###
+
+POST http://localhost:3000/product
+Content-Type: application/json
+Authorization: Bearer <access_token>
+
+{
+    "title" : "Apple",
+    "price" : 25.5,
+    "description" : "Green apple",
+    "category_id" : 1
+}
+
+###
+
+PUT http://localhost:3000/product/1
+Content-Type: application/json
+Authorization: Bearer <access_token>
+
+{
+    "title" : "Banana",
+    "price" : 40,
+    "description" : "Yellow banana",
+    "category_id" : 1
+}
+
+###
+
+PATCH http://localhost:3000/product/1
+Content-Type: application/json
+Authorization: Bearer <access_token>
+
+{
+    "price" : 35.99
+}
+
+###
+
+DELETE http://localhost:3000/product/1
+Authorization: Bearer <access_token>
